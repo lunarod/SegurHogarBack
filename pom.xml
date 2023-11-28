@@ -15,23 +15,23 @@
             <groupId>com.segurhogar</groupId>
             <artifactId>segurhogar-ejb</artifactId>
             <type>ejb</type>
-            <version>${project.version}</version>
+            <version>5.10.17</version>
         </dependency>
         <dependency>
             <groupId>com.segurhogar.services</groupId>
             <artifactId>segurhogar-rest</artifactId>
             <type>war</type>
-            <version>${project.version}</version>
+            <version>5.10.17</version>
         </dependency>
     </dependencies>
 
     <build>
-        <finalName>${project.artifactId}</finalName>
-        <sourceDirectory>${basedir}/src</sourceDirectory>
-        <outputDirectory>${project.build.directory}</outputDirectory>
+        <finalName>segurhogar-ear</finalName>
+        <sourceDirectory>E:\\Luna\\SegurHogar\\SegurhogarModule\\segurhogar-ear/src</sourceDirectory>
+        <outputDirectory>E:\\Luna\\SegurHogar\\SegurhogarModule\\segurhogar-ear\\target</outputDirectory>
         <resources>
             <resource>
-                <directory>${basedir}</directory>
+                <directory>E:\\Luna\\SegurHogar\\SegurhogarModule\\segurhogar-ear</directory>
                 <filtering>true</filtering>
                 <includes>
                     <include>**/*.xml</include>
@@ -84,8 +84,8 @@
                     </domain>
                     <components>
                         <component>
-                            <name>${project.artifactId}</name>
-                            <artifact>${project.build.directory}/${project.build.finalName}.${project.packaging}</artifact>
+                            <name>segurhogar-ear</name>
+                            <artifact>E:\\Luna\\SegurHogar\\SegurhogarModule\\segurhogar-ear\\target/segurhogar-ear.ear</artifact>
                         </component>
                     </components>
                 </configuration>
