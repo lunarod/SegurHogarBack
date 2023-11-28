@@ -1,0 +1,13 @@
+com\segurhogar\ibatis\example\BaseExample$GeneratedCriteria.class
+com\segurhogar\ibatis\utils\BBDD$Condition.class
+com\segurhogar\ibatis\utils\BBDD$Column.class
+com\segurhogar\ibatis\example\BaseExample$Criterion.class
+com\segurhogar\ibatis\example\BaseExample.class
+com\segurhogar\ibatis\utils\BBDD$Column$CLIENTE.class
+com\segurhogar\ibatis\utils\BBDD$Alias.class
+com\segurhogar\ibatis\utils\ExceptionUtils.class
+com\segurhogar\ibatis\mapper\ClienteMapper.class
+com\segurhogar\ibatis\utils\BBDD$IColumn.class
+com\segurhogar\di\JtaManager.class
+com\segurhogar\ibatis\example\BaseExample$Criteria.class
+com\segurhogar\ibatis\utils\BBDD.class

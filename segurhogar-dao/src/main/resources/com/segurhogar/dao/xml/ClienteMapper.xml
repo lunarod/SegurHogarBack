@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "org/apache/ibatis/builder/xml/mybatis-3-mapper.dtd" >
+<mapper namespace="com.segurhogar.ibatis.mapper.ClienteMapper">
+
+    <!--  INICIO DE DECLARACIONES DE RESULTMAP´S -->
+    <resultMap type="ClienteModel" id="ClienteModel">
+        <result column="ID_CLIENTE" jdbcType="BIGINT" property="ID_CLIENTE" />
+        <result column="NOMBRE" jdbcType="VARCHAR" property="NOMBRE" />
+        <result column="APELLIDO1" jdbcType="VARCHAR" property="APELLIDO1" />
+        <result column="APELLIDO2" jdbcType="VARCHAR" property="APELLIDO2" />
+        <result column="DOCUMENTO" jdbcType="VARCHAR" property="DOCUMENTO" />
+        <result column="FE_NACIMIENTO" jdbcType="TIMESTAMP" property="FE_NACIMIENTO" />
+        <result column="MAIL" jdbcType="VARCHAR" property="MAIL" />
+        <result column="TELEFONO" jdbcType="VARCHAR" property="TELEFONO" />
+    </resultMap>
+    <!--  FIN DE DECLARACIONES DE RESULTMAP´S -->
+
+    <!--  INICIO DE DECLARACIONES DE COLUMN_LIST -->
+    <select id="getDetailClient" resultType="ClienteModel" statementType="CALLABLE">
+        SELECT ID_CLIENTE, NOMBRE, APELLIDO1, APELLIDO2, FE_NACIMIENTO, MAIL, TELEFONO FROM CLIENTE WHERE DOCUMENTO='02288839V'
+    </select>
+    
+    <select id="inserta" parameterType="ClienteModel" statementType="CALLABLE">
+		call PKG_CLIENTES.inserta (
+				#{ID_CLIENTE,jdbcType=BIGINT,mode=OUT},
+				#{NOMBRE,jdbcType=VARCHAR,mode=IN},
+				#{APELLIDO1,jdbcType=VARCHAR,mode=IN}, 
+				#{APELLIDO2,jdbcType=VARCHAR,mode=IN},
+				#{DOCUMENTO,jdbcType=VARCHAR,mode=INOUT},
+				#{FE_NACIMIENTO,jdbcType=DATE,mode=IN}, 
+      			#{EMAIL,jdbcType=VARCHAR,mode=IN},
+      			#{TELEFONO,jdbcType=VARCHAR,mode=IN})
+  	</select> 
+
+</mapper>
